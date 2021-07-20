@@ -7,7 +7,12 @@
 //that will log to console the text value of any div that is clicked on inside div .one
 //for example clicking on three will log "three" to the console
 
-const upload = document.querySelectorAll(".one").addEventListener("click", console.log(upload), false);
+const upload = document.querySelectorAll(".one");
+upload.addEventListener("click", logDiv(), false);
+
+function logDiv() {
+    console.log(upload.value)
+}
 
 //part four write a function that takes a name argument and returns a paragraph element
 //with the text "hello <name>" use template literals
@@ -15,22 +20,22 @@ const upload = document.querySelectorAll(".one").addEventListener("click", conso
 function getName() {
     let name = window.prompt("Name: ");
     let result = `<p>hello ${name}</p>`;
-    console.log(result)
+    return result
 }
 
 //part five write a function that will get the text value from the text input
 
 function getText() {
-    window.prompt("Enter text to return its value: ");
-    let textValue = document.querySelector().value; 
+    let input = window.prompt("Enter text to return its value: ");
+    let textValue = input.value
     return textValue
 }
 
 //part six write an event handler that will use the two functions created above to insert
 //a new paragraph at the end of div .two when the button is clicked.
 
-let ptwo = `<p>new para!</p>`
-const updateTwo = document.querySelectorAll(".two");
+let ptwo = `<p>hello</p>`
+const updateTwo = document.querySelector(".hello-button");
 
 function logAbove() {
     console.log (ptwo, getText(), getName())
